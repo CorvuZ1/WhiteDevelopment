@@ -11,6 +11,22 @@ body {
   height: 100%;
 }
 
+.chatbar {
+  z-index: 100;
+  width: 89px;
+  height: 89px;
+  position: fixed;
+  border: none;
+  right: 97px;
+  bottom: 57px;
+  background-color: $blue;
+  border-radius: 50px;
+  background-image: url("imgs/chatbar.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1920px;
@@ -95,6 +111,9 @@ body {
       color: #757575;
       margin-left: 48px;
       font-family: "Averta500";
+      &:hover {
+        text-decoration: underline;
+      }
       &:first-child {
         margin-left: 0;
       }
@@ -107,6 +126,9 @@ body {
       font-size: 18px;
       font-family: "Averta500";
       margin-right: 48px;
+      &:hover {
+        text-decoration: underline;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -115,6 +137,8 @@ body {
 }
 
 .about {
+  bottom: 10px;
+  position: relative;
   margin-top: 92px;
   width: 100%;
   &_inner {
@@ -147,12 +171,16 @@ body {
     width: 603px;
     position: relative;
     &-catalog, &-pickup {
-      height: 60px;
-      border-radius: 12px;
+      min-height: 60px;
+      max-height: 60px;
       border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       color: White;
       font-size: 18px;
       font-family: "Averta500";
+      box-sizing: border-box;
       cursor: pointer;
       width: 100%;
     }
@@ -161,24 +189,37 @@ body {
       display: inline-flex;
       align-items: center;
       position: relative;
+      background-color: $blue;
+      border-radius: 12px;
+      transition-duration: $btnHoverDur;
+      &:hover {
+        background-color: $blueOnHover;
+      }
     }
     &-img {
       position: absolute;
       right: 52px;
+      z-index: 2;
     }
     &-catalog {
-      background-color: $blue;
+      background-color: transparent;
       position: relative;
-      z-index: -1;
+      z-index: 3;
       padding-bottom: 5px;
       padding-right: 47px;
     }
     &-pickup {
       position: absolute;
+      border-radius: 12px;
       right: 0;
+      bottom: 0;
       width: 272px;
       background-color: transparent;
       border: 1px solid white;
+      transition-duration: $btnHoverDur;
+      &:hover {
+        background-color: rgba(0,0,0, 0.40);
+      }
     }
   }
 }

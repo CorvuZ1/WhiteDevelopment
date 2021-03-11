@@ -74,6 +74,22 @@ body {
   height: 100%;
 }
 
+.chatbar {
+  z-index: 100;
+  width: 89px;
+  height: 89px;
+  position: fixed;
+  border: none;
+  right: 97px;
+  bottom: 57px;
+  background-color: #4339f2;
+  border-radius: 50px;
+  background-image: url("imgs/chatbar.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1920px;
@@ -201,6 +217,10 @@ body {
   font-family: "Averta500";
 }
 
+.header_nav-link:hover {
+  text-decoration: underline;
+}
+
 .header_nav-link:first-child {
   margin-left: 0;
 }
@@ -216,11 +236,17 @@ body {
   margin-right: 48px;
 }
 
+.header_contacts-link:hover {
+  text-decoration: underline;
+}
+
 .header_contacts-link:last-child {
   margin-right: 0;
 }
 
 .about {
+  bottom: 10px;
+  position: relative;
   margin-top: 92px;
   width: 100%;
 }
@@ -267,12 +293,23 @@ body {
 }
 
 .about_buttons-catalog, .about_buttons-pickup {
-  height: 60px;
-  border-radius: 12px;
+  min-height: 60px;
+  max-height: 60px;
   border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: White;
   font-size: 18px;
   font-family: "Averta500";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
   width: 100%;
 }
@@ -286,25 +323,44 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  background-color: #4339f2;
+  border-radius: 12px;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.about_buttons-first:hover {
+  background-color: #2e27af;
 }
 
 .about_buttons-img {
   position: absolute;
   right: 52px;
+  z-index: 2;
 }
 
 .about_buttons-catalog {
-  background-color: #4339F2;
+  background-color: transparent;
   position: relative;
-  z-index: -1;
+  z-index: 3;
   padding-bottom: 5px;
   padding-right: 47px;
 }
 
 .about_buttons-pickup {
   position: absolute;
+  border-radius: 12px;
   right: 0;
+  bottom: 0;
   width: 272px;
   background-color: transparent;
   border: 1px solid white;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.about_buttons-pickup:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
