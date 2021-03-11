@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Averta500"; /* Averta 400 нету в шрифтах и некоторых других */
+  src: url('fonts/AvertaCY-500.woff') format('woff'),
+       url('fonts/AvertaCY-500.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: "Museo300";
+  src: url('fonts/MuseoSansCyrl-300.woff') format('woff'), 
+       url('fonts/MuseoSansCyrl-300.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: "Museo500";
+  src: url('fonts/MuseoSansCyrl-500.woff') format('woff'), 
+       url('fonts/MuseoSansCyrl-500.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: "Museo100";
+  src: url('fonts/MuseoSansCyrl-100.woff') format('woff'), 
+       url('fonts/MuseoSansCyrl-100.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: "Stem900";
+  src: url("fonts/Stem-900.woff") format("woff"),
+       url("fonts/Stem-900.woff2") format("woff2")
+}
