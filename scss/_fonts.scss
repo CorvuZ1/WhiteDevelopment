@@ -27,3 +27,7 @@
   src: url("fonts/Stem-900.woff") format("woff"),
        url("fonts/Stem-900.woff2") format("woff2")
 }
+
+@mixin fontSize($origFontSize, $minFontSize) {
+  font-size: calc(#{$minFontSize + px} + (#{$origFontSize - $minFontSize}) * ((100vw - 360px) / (1920 - 360)));
+}
